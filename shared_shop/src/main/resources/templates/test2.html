@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+    th:replace="~{common/layout_5block :: layout(~{::title},~{::body/content()})}">
+<head>
+<title th:text="#{top}+' | '+ #{shop.title}"> </title>
+<meta charset="UTF-8" />
+</head>
+<body class="user index">
+	
+		<h2 class="title">
+		<span th:if="${sortType==1}" th:text="#{sort.latest.title}"></span>
+				<span>ランキング</span>
+					
+	</h2>
+	<br>
+	<table>
+					<tr>
+						<th><font size=5>1位　北海道地方</font></th>
+						<td><img width="200" th:src="@{/images/test1.jpg}"></td>
+					</tr>
+					<tr>	
+						<th><font size=5>2位　九州地方</font></th>
+						<td><img width="230" th:src="@{/images/test2.jpg}"></td>
+					</tr>
+					
+					<tr>
+						<th><font size=5>3位　東北地方</font></th>
+						<td><img width="100" th:src="@{/images/test3.jpg}"></td>
+					</tr>
+					<tr>
+						<th><font size=5>4位　近畿地方</font></th>
+						<td><img width="170" th:src="@{/images/test4.jpg}"></td>
+					</tr>
+					<tr>
+						<th><font size=5>5位　中部地方</font></th>
+						<td><img width="170" th:src="@{/images/test5.jpg}"></td>
+					</tr>
+	</table>
+	
+
+	</th:block>
+</body>
+</html>
